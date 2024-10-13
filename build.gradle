@@ -37,6 +37,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.1'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.12.6'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.12.6'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version:'0.12.6'
 
 }
 
