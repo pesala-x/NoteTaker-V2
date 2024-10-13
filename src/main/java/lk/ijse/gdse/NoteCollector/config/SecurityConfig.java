@@ -12,7 +12,12 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-
+    @Value("${secure.basic.username}")
+    String username;
+    @Value("${secure.basic.password}")
+    String password;
+    @Value("${secure.basic.role}")
+    String role;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -27,9 +32,9 @@ public class SecurityConfig {
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
         UserDetails principleUser = User.withDefaultPasswordEncoder()
-                .username("Pesala")
-                .password("1234")
-                .roles("ADMIN")
+                .username(username)
+                .password(password)
+                .roles(role)
                 .build();
         return new InMemoryUserDetailsManager(principleUser);
     }
