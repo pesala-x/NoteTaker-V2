@@ -3,8 +3,8 @@ package lk.ijse.gdse.NoteCollector.controller;
 
 import lk.ijse.gdse.NoteCollector.dto.impl.UserDTO;
 import lk.ijse.gdse.NoteCollector.exception.DataPersistFailedException;
-import lk.ijse.gdse.NoteCollector.jwtOdels.JWTResponse;
-import lk.ijse.gdse.NoteCollector.jwtOdels.SignIn;
+import lk.ijse.gdse.NoteCollector.jwtModels.JWTResponse;
+import lk.ijse.gdse.NoteCollector.jwtModels.SignIn;
 import lk.ijse.gdse.NoteCollector.util.AppUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
